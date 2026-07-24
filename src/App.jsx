@@ -2,6 +2,9 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Layout from "./components/Layout";
 
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+
 import Login from "./Pages/Login";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import RefundandCancellation from "./Pages/RefundandCancellation";
@@ -42,6 +45,8 @@ function App() {
             element={<RefundandCancellation />}
           />
 
+          <Route path="/" element={<Home />} />
+          <Route path="about-us" element={<About/>}/>
           <Route path="blogs" element={<AllBlogs />} />
           <Route path="/blogs/:slug" element={<BlogDetails />} />
           <Route path="sign-up" element={<SignUp />} />
